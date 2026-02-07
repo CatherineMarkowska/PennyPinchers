@@ -13,10 +13,7 @@ import WorkNEarnBranch3 from './components/WorkNEarnBranch-3'
 import WorkNEarnBranch4 from './components/WorkNEarnBranch-4'
 import WorkNEarnBranch5 from './components/WorkNEarnBranch-5'
 import WorkNEarnBranch6 from './components/WorkNEarnBranch-6'
-import WorkNEarnBranch7 from './components/WorkNEarnBranch-7'
-import WorkNEarnBranch8 from './components/WorkNEarnBranch-8'
-import WorkNEarnBranch9 from './components/WorkNEarnBranch-9'
-import WorkNEarnBranch10 from './components/WorkNEarnBranch-10'
+
 
 
 
