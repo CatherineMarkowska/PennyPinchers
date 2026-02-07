@@ -1,0 +1,138 @@
+.bank-clerk {
+  min-height: calc(100vh - 70px);
+  background: #000;
+  color: #f4efe6;
+  padding: 2rem 4vw 2.5rem;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.bank-clerk::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1457694716743-eb419114c894?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: sepia(20%) brightness(0.55);
+  opacity: 0.7;
+}
+
+.bank-clerk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.bank-clerk > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bank-clerk__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.bank-clerk__act {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.5rem;
+}
+
+.bank-clerk__dots {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.bank-clerk__dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.bank-clerk__dots .is-active {
+  background: #b4161b;
+}
+
+.bank-clerk__status {
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  text-transform: uppercase;
+}
+
+.bank-clerk__status h3 {
+  margin: 0 0 0.8rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bank-clerk__status div {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 0;
+}
+
+.bank-clerk__status p {
+  margin: 0;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bank-clerk__status strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+.bank-clerk__story {
+  margin: 10vh auto 2.5rem;
+  max-width: 640px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(180, 22, 27, 0.6);
+  padding: 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.bank-clerk__story p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.bank-clerk__story p:last-child {
+  margin-bottom: 0;
+}
+
+.bank-clerk__choices {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bank-clerk__choices button {
+  background: rgba(10, 18, 30, 0.9);
+  color: #f4efe6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.6rem;
+  min-width: 220px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
