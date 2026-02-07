@@ -2,7 +2,10 @@ import './Tile.css'
 
 function Tile({ era, onStart }) {
   return (
-    <article className="tile">
+    <article
+  id={era.featured ? 'featured-tile' : undefined}
+  className={`tile${era.featured ? ' tile--featured' : ''}`}
+>
       <div
         className="tile-image"
         style={{ backgroundImage: `url(${era.image})` }}

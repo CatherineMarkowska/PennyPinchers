@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+
 import './App.css'
 import Tile from './components/Tile'
 import Era from './components/Era'
@@ -12,72 +13,131 @@ function App() {
   const [view, setView] = useState('home') // home | now | how | stories | era | roles | story
   const [ticketEmail, setTicketEmail] = useState('')
   const [ticketPurchased, setTicketPurchased] = useState(false)
+  const tileGridRef = useRef(null)
   const eras = [
+    {
+      title: 'Renaissance',
+      years: '1300–1600',
+      rating: 'PG',
+      description:
+        'Witness the rebirth of art, science, and humanism as Europe transforms.',
+      status: 'soon',
+      image: 'https://images.unsplash.com/photo-1549893074-6a5f6aab8c8b',
+    },
+    {
+      title: 'American Revolution',
+      years: '1775–1783',
+      rating: 'PG',
+      description:
+        'Stand at the edge of independence as colonies fight to form a nation.',
+      status: 'soon',
+      image: 'https://images.unsplash.com/photo-1580136579312-94651dfd596d',
+    },
+    {
+      title: 'Industrial Revolution',
+      years: '1760–1840',
+      rating: 'PG',
+      description:
+        'Factories rise, cities expand, and society reshapes around machines.',
+      status: 'soon',
+      image: 'https://images.unsplash.com/photo-1520974735194-24e6e8b1bfb4',
+    },
+    {
+      title: 'Roaring Twenties',
+      years: '1920–1929',
+      rating: 'PG',
+      description:
+        'Jazz, prohibition, and economic boom before the crash that changed everything.',
+      status: 'soon',
+      image: 'https://images.unsplash.com/photo-1541976076758-347942db1979',
+    },
     {
       title: 'The Great Depression',
       years: '1929–1939',
       rating: 'PG',
+      featured: true,
       description:
         'Step into the era of breadlines and dust storms as families fight to endure. Follow everyday lives shaped by hardship, resilience, and hope.',
       status: 'start',
-      image:
-        'https://unsplash.com/photos/man-in-black-and-red-jacket-holding-brown-wooden-stick-rJ6tenVnp9A',
+      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',
     },
     {
       title: 'World War II',
       years: '1939–1945',
       rating: 'R',
       description:
-        'Move through the global conflict that reshaped nations and generations. Experience the home front, the front lines, and the choices in between.',
+        'Experience the global conflict that reshaped nations and generations.',
       status: 'soon',
-      image:
-        'https://unsplash.com/photos/three-monoplanes-squadron-in-world-war-2-oyGmigXV030',
+      image: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df',
+    },
+    {
+      title: 'Civil Rights Movement',
+      years: '1954–1968',
+      rating: 'PG-13',
+      description:
+        'March for justice and equality in a defining era of change.',
+      status: 'soon',
+      image: 'https://images.unsplash.com/photo-1555848962-6e79363ec58f',
     },
     {
       title: 'Apollo 11: Moon Landing',
       years: '1969',
       rating: 'PG',
       description:
-        'Relive the race to the moon and the tension inside Mission Control. Discover the courage and innovation behind one giant leap.',
+        'Relive the tension and triumph of one giant leap for mankind.',
       status: 'soon',
-      image:
-        'https://unsplash.com/photos/buzz-aldrin-on-the-moon-in-front-of-the-us-flag-UeSpvB0Qo88',
+      image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa',
     },
     {
       title: 'Fall of the Berlin Wall',
       years: '1989',
       rating: 'PG-13',
       description:
-        'Witness the night a city and a world changed forever. Follow voices from both sides as freedom breaks through concrete.',
+        'Witness a divided world begin to reunite.',
       status: 'soon',
-      image:
-        'https://assets.pewresearch.org/wp-content/uploads/sites/12/2014/10/FT_14.10.15_berlinWallPhoto.jpg',
-      },  
-      {
-      title: 'Chernobyl Disaster',
-      years: '1986',
-      rating: 'R',
-      description:
-        'Enter the tense hours after the reactor failure and the race to contain it. See the human cost and the bravery that followed.',
-      status: 'soon',
-      image:
-        'https://unsplash.com/photos/yellow-and-black-house-on-brown-grass-field-q-QZw_s97Oc',
-      },
-    {
-      title: 'Civil Rights Movement',
-      years: '1954–1968',
-      rating: 'PG-13',
-      description:
-        'Walk alongside organizers, students, and leaders in the fight for justice. From sit-ins to marches, courage builds a new future.',
-      status: 'soon',
-      image:
-        'https://unsplash.com/photos/civil-rights-march-on-washington-dc-WzPxmB_tRlw',
+      image: 'https://images.unsplash.com/photo-1549924231-f129b911e442',
     },
   ]
+  
   const nowShowing = eras.filter((era) => era.status === 'start')
   const earlyAccessDate = 'February 7, 2026'
+  useEffect(() => {
+    if (view !== 'stories') return
 
-  return (
+    const centerFeatured = () => {
+      const container = document.querySelector('.tile-grid')
+      const featured = document.querySelector('.tile--featured')
+
+      if (!container || !featured) return
+
+      const offset =
+        featured.offsetLeft - container.clientWidth / 2 + featured.clientWidth / 2
+
+      container.scrollTo({
+        left: offset,
+        behavior: 'auto',
+      })
+    }
+
+    const raf1 = requestAnimationFrame(() => {
+      const raf2 = requestAnimationFrame(centerFeatured)
+      setTimeout(centerFeatured, 0)
+      return raf2
+    })
+
+    const onResize = () => centerFeatured()
+    window.addEventListener('resize', onResize)
+    window.addEventListener('load', centerFeatured)
+
+    return () => {
+      cancelAnimationFrame(raf1)
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('load', centerFeatured)
+    }
+  }, [view])
+  
+  
+    return (
     <div className="app">
       <div className="promo-bar">
         Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate} and score a Roar Pack!
@@ -205,7 +265,7 @@ function App() {
             <p>Explore every era and see what's coming next.</p>
           </div>
 
-          <div className="tile-grid">
+          <div className="tile-grid" ref={tileGridRef}>
             {eras.map((era) => (
               <Tile
                 key={era.title}
