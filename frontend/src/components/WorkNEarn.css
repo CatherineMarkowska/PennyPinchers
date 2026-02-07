@@ -1,0 +1,36 @@
+.work-earn {
+  min-height: calc(100vh - 70px);
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 6vw;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-align: center;
+}
+
+.work-earn__card {
+  max-width: 760px;
+}
+
+.work-earn__card p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0 0 2rem;
+}
+
+.work-earn__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work-earn__actions button {
+  background: rgba(10, 18, 30, 0.9);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.9rem 1.4rem;
+  font-family: inherit;
+}

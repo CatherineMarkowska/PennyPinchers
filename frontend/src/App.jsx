@@ -6,11 +6,19 @@ import Era from './components/Era'
 import RoleSelect from './components/RoleSelect'
 import BankClerkPath from './components/BankClerkPath'
 import StayCalmWait from './components/StayCalmWait'
+<<<<<<< HEAD
+=======
+import WorkNEarn from './components/WorkNEarn'
+>>>>>>> tan-branch
 
 
 
 function App() {
+<<<<<<< HEAD
   const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | story
+=======
+  const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | work-earn | story
+>>>>>>> tan-branch
   const [ticketEmail, setTicketEmail] = useState('')
   const [ticketPurchased, setTicketPurchased] = useState(false)
   const tileGridRef = useRef(null)
@@ -59,7 +67,12 @@ function App() {
       description:
         'Step into the era of breadlines and dust storms as families fight to endure. Follow everyday lives shaped by hardship, resilience, and hope.',
       status: 'start',
+<<<<<<< HEAD
       image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29',
+=======
+      image:
+        'https://images.unsplash.com/photo-1587553906014-b2b4060dd6f5?q=80&w=980&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+>>>>>>> tan-branch
     },
     {
       title: 'World War II',
@@ -68,6 +81,7 @@ function App() {
       description:
         'Experience the global conflict that reshaped nations and generations.',
       status: 'soon',
+<<<<<<< HEAD
       image: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df',
     },
     {
@@ -78,6 +92,10 @@ function App() {
         'March for justice and equality in a defining era of change.',
       status: 'soon',
       image: 'https://images.unsplash.com/photo-1555848962-6e79363ec58f',
+=======
+      image:
+        'https://images.unsplash.com/photo-1571840933517-88a527cd7008?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+>>>>>>> tan-branch
     },
     {
       title: 'Apollo 11: Moon Landing',
@@ -86,7 +104,12 @@ function App() {
       description:
         'Relive the tension and triumph of one giant leap for mankind.',
       status: 'soon',
+<<<<<<< HEAD
       image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa',
+=======
+      image:
+        'https://images.unsplash.com/photo-1614726365930-627c75da663e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+>>>>>>> tan-branch
     },
     {
       title: 'Fall of the Berlin Wall',
@@ -95,7 +118,32 @@ function App() {
       description:
         'Witness a divided world begin to reunite.',
       status: 'soon',
+<<<<<<< HEAD
       image: 'https://images.unsplash.com/photo-1549924231-f129b911e442',
+=======
+      image:
+        'https://assets.pewresearch.org/wp-content/uploads/sites/12/2014/10/FT_14.10.15_berlinWallPhoto.jpg',
+      },  
+      {
+      title: 'Chernobyl Disaster',
+      years: '1986',
+      rating: 'R',
+      description:
+        'Enter the tense hours after the reactor failure and the race to contain it. See the human cost and the bravery that followed.',
+      status: 'soon',
+      image:
+        'https://images.unsplash.com/photo-1590355200067-675cf378fb74?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    {
+      title: 'Civil Rights Movement',
+      years: '1954–1968',
+      rating: 'PG-13',
+      description:
+        'Walk alongside organizers, students, and leaders in the fight for justice. From sit-ins to marches, courage builds a new future.',
+      status: 'soon',
+      image:
+        'https://images.unsplash.com/photo-1576568699714-a3f4950805d5?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+>>>>>>> tan-branch
     },
   ]
   
@@ -363,7 +411,13 @@ function App() {
 
       {view === 'bank-clerk' && <BankClerkPath onStayCalm={() => setView('stay-calm')} />}
 
+<<<<<<< HEAD
       {view === 'stay-calm' && <StayCalmWait />}
+=======
+      {view === 'stay-calm' && <StayCalmWait onWorkEarn={() => setView('work-earn')} />}
+
+      {view === 'work-earn' && <WorkNEarn />}
+>>>>>>> tan-branch
 
       {view === 'story' && <StoryScene onBack={() => setView('roles')} />}
     </div>
