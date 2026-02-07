@@ -23,10 +23,10 @@ function StayCalmWait({ onWorkEarn }) {
 
       <div className="stay-calm__actions">
          <button type="button" >
-          Some thing some thing 1
+          Deny the offer!
         </button>
         <button type="button" >
-          Some thing some thing 2
+          DENY THE OFFER! But In uppercase!
         </button>
         <button type="button" onClick={onWorkEarn}>
           Work and earn extra money

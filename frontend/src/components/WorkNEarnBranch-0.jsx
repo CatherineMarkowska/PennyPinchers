@@ -8,8 +8,8 @@ function WorkNEarnBranch0({ onNext }) {
         <button type="button" onClick={onNext}>
           Take your brother in Family comes first!
         </button>
-        <button type="button">Choice 2</button>
-        <button type="button">Choice 3</button>
+        <button type="button">Ignore your brother</button>
+        <button type="button">gitignore</button>
       </div>
     </section>
   )
