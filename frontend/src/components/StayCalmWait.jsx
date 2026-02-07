@@ -4,8 +4,39 @@ import './StayCalmWait.css'
 
 function StayCalmWait({ onWorkEarn }) {
   return (
-    <section className="stay-calm">
-      <div className="stay-calm__card">
+    <section className="bank-clerk">
+      <div className="bank-clerk__top">
+        <div className="bank-clerk__act">
+          <span>Act I of III</span>
+          <div className="bank-clerk__dots">
+            <span className="is-active" />
+            <span className="is-active" />
+            <span className="is-active" />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+        <aside className="bank-clerk__status">
+          <h3>Your Status</h3>
+          <div>
+            <p>Savings</p>
+            <strong>$1200</strong>
+          </div>
+          <div>
+            <p>Employment</p>
+            <strong>Bank Clerk</strong>
+          </div>
+          <div>
+            <p>Family Morale</p>
+            <strong>Stable</strong>
+          </div>
+        </aside>
+      </div>
+
+      <div className="bank-clerk__story">
         <p>
           You take a deep breath and step away from the chaos. By Friday morning, the
           newspapers report that major banks have pledged to stabilize the market. Your
@@ -32,7 +63,6 @@ function StayCalmWait({ onWorkEarn }) {
           Work and earn extra money
         </button>
       </div>
-
     </section>
   )
 }
