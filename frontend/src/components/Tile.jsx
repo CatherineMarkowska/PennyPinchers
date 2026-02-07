@@ -20,6 +20,7 @@ function Tile({ era, onStart }) {
         <div className="tile-meta">
           <span>{era.rating}</span>
         </div>
+        <p className="tile-description">{era.description}</p>
       </div>
       {era.status === 'start' ? (
         <button className="primary-btn tile-btn" type="button" onClick={onStart}>
