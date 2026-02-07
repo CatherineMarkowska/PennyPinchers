@@ -7,7 +7,7 @@ import RoleSelect from './components/RoleSelect'
 
 
 function App() {
-  const [view, setView] = useState('home') // home | era | roles | story
+  const [view, setView] = useState('home') // home | how | era | roles | story
   const eras = [
     {
       title: 'The Great Depression',
@@ -77,7 +77,9 @@ function App() {
             Home
           </button>
           <a href="#now">Now Showing</a>
-          <a href="#how">How It Works</a>
+          <button className="ghost-btn" type="button" onClick={() => setView('how')}>
+            How It Works
+          </button>
           <a href="#stories">Stories</a>
         </nav>
       </header>
@@ -97,6 +99,76 @@ function App() {
                 onStart={era.status === 'start' ? () => setView('era') : undefined}
               />
             ))}
+          </div>
+        </section>
+      )}
+
+      {view === 'how' && (
+        <section id="how" className="how-it-works">
+          <div className="how-hero">
+            <p className="how-kicker">How It Works</p>
+            <h1>Step into history, one choice at a time</h1>
+            <p className="how-lede">
+              Each story drops you into a pivotal historical era. Your choices shape the
+              story, your relationships, and the outcome.
+            </p>
+            <div className="how-actions">
+              <button className="primary-btn" type="button" onClick={() => setView('era')}>
+                Get Tickets
+              </button>
+              <button className="ghost-btn" type="button" onClick={() => setView('home')}>
+                Back To Home
+              </button>
+            </div>
+          </div>
+
+          <div className="how-grid">
+            <div className="how-card">
+              <h3>Choose a Role</h3>
+              <p>
+                Select a role and starting resources. Each role unlocks different pressures,
+                opportunities, and perspectives.
+              </p>
+            </div>
+            <div className="how-card">
+              <h3>Face Daily Decisions</h3>
+              <p>
+                Work, family, safety, and loyalty collide in every era. Pick your
+                priorities and feel the consequences.
+              </p>
+            </div>
+            <div className="how-card">
+              <h3>Watch The Story Shift</h3>
+              <p>
+                Your choices ripple across the community. The narrative branches into
+                different paths and endings.
+              </p>
+            </div>
+          </div>
+
+          <div className="how-highlight">
+            <div>
+              <h2>Multiple Eras, Multiple Paths</h2>
+              <p>
+                Play through events like the Great Depression, the fall of the Berlin Wall,
+                or the Chernobyl disaster. Each era has its own stakes, dilemmas, and
+                endings.
+              </p>
+            </div>
+            <div className="how-stats">
+              <div>
+                <span>Stories</span>
+                <strong>Multiple Eras</strong>
+              </div>
+              <div>
+                <span>Perspective</span>
+                <strong>Everyday People</strong>
+              </div>
+              <div>
+                <span>Gameplay</span>
+                <strong>Branching Choices</strong>
+              </div>
+            </div>
           </div>
         </section>
       )}
