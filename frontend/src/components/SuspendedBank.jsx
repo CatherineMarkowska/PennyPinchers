@@ -2,11 +2,11 @@ import './SuspendedBank.css'
 
 function SuspendedBank({ onStayInLine, onGoHome, onDemand }) {
   return (
-    <section className="suspended-banks">
-      <div className="suspended-banks__top">
-        <div className="suspended-banks__act">
+    <section className="bank-clerk">
+      <div className="bank-clerk__top">
+        <div className="bank-clerk__act">
           <span>Act I of III</span>
-          <div className="suspended-banks__dots">
+          <div className="bank-clerk__dots">
             <span className="is-active" />
             <span className="is-active" />
             <span className="is-active" />
@@ -17,7 +17,7 @@ function SuspendedBank({ onStayInLine, onGoHome, onDemand }) {
             <span />
           </div>
         </div>
-        <aside className="suspended-banks__status">
+        <aside className="bank-clerk__status">
           <h3>Your Status</h3>
           <div>
             <p>Savings</p>
@@ -33,7 +33,7 @@ function SuspendedBank({ onStayInLine, onGoHome, onDemand }) {
           </div>
         </aside>
       </div>
-      <div className="suspended-banks__story">
+      <div className="bank-clerk__story">
         <p>The line outside the bank stretches around the block.</p>
         <p>
           You've been waiting three hours. The woman in front of you is crying. Behind you,
@@ -42,7 +42,7 @@ function SuspendedBank({ onStayInLine, onGoHome, onDemand }) {
         <p>The bank doors remain closed. A sign appears:</p>
         <p>"Temporarily suspended operations."</p>
       </div>
-      <div className="suspended-banks__choices">
+      <div className="bank-clerk__choices">
         <button type="button" onClick={onStayInLine}>
           Stay in line. You need the money.
         </button>
