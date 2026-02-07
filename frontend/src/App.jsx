@@ -15,7 +15,7 @@ function App() {
       rating: 'PG',
       status: 'start',
       image:
-        'https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=800&q=80',
+        'https://unsplash.com/photos/man-in-black-and-red-jacket-holding-brown-wooden-stick-rJ6tenVnp9A',
     },
     {
       title: 'World War II',
@@ -23,7 +23,7 @@ function App() {
       rating: 'R',
       status: 'soon',
       image:
-        'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80',
+        'https://unsplash.com/photos/three-monoplanes-squadron-in-world-war-2-oyGmigXV030',
     },
     {
       title: 'Apollo 11: Moon Landing',
@@ -31,7 +31,7 @@ function App() {
       rating: 'PG',
       status: 'soon',
       image:
-        'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80',
+        'https://unsplash.com/photos/buzz-aldrin-on-the-moon-in-front-of-the-us-flag-UeSpvB0Qo88',
     },
     {
       title: 'Fall of the Berlin Wall',
@@ -39,15 +39,14 @@ function App() {
       rating: 'PG-13',
       status: 'soon',
       image:
-        'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=80',
-    },
+        'https://assets.pewresearch.org/wp-content/uploads/sites/12/2014/10/FT_14.10.15_berlinWallPhoto.jpg',
     {
       title: 'Chernobyl Disaster',
       years: '1986',
       rating: 'R',
       status: 'soon',
       image:
-        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80',
+        'https://unsplash.com/photos/yellow-and-black-house-on-brown-grass-field-q-QZw_s97Oc',
     },
     {
       title: 'Civil Rights Movement',
@@ -55,7 +54,7 @@ function App() {
       rating: 'PG-13',
       status: 'soon',
       image:
-        'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
+        'https://unsplash.com/photos/civil-rights-march-on-washington-dc-WzPxmB_tRlw',
     },
   ]
 
@@ -65,7 +64,7 @@ function App() {
         <div className="logo">
           <img
             className="logo-icon"
-            src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/film.png"
+            src="https://www.123rf.com/photo_63402711_film-clap-board-cinema-sign-white-icon-on-red-circle.html"
             alt="Film icon"
           />
           <div>
