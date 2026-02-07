@@ -1,4 +1,4 @@
-.suspended-banks {
+.withdraw-50 {
   min-height: calc(100vh - 70px);
   background: #000;
   color: #f4efe6;
@@ -8,37 +8,37 @@
   font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-.suspended-banks::before {
+.withdraw-50::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_1080,h_540,g_auto/dpr_auto/f_auto/q_auto:eco/v1/640482151_u7tayx?_a=BAVAZGID0');
+  background-image: url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_1080,h_540,g_auto/dpr_auto/f_auto/q_auto:eco/v1/great-depression-stock-market-crash-gettyimages-515303204');
   background-size: cover;
   background-position: center;
   filter: sepia(30%) brightness(0.5);
   opacity: 0.75;
 }
 
-.suspended-banks::after {
+.withdraw-50::after {
   content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
 }
 
-.suspended-banks > * {
+.withdraw-50 > * {
   position: relative;
   z-index: 1;
 }
 
-.suspended-banks__top {
+.withdraw-50__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
 }
 
-.suspended-banks__act {
+.withdraw-50__act {
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0.6rem 1rem;
@@ -50,23 +50,23 @@
   font-size: 0.5rem;
 }
 
-.suspended-banks__dots {
+.withdraw-50__dots {
   display: inline-flex;
   gap: 0.25rem;
 }
 
-.suspended-banks__dots span {
+.withdraw-50__dots span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.25);
 }
 
-.suspended-banks__dots .is-active {
+.withdraw-50__dots .is-active {
   background: #b4161b;
 }
 
-.suspended-banks__status {
+.withdraw-50__status {
   background: rgba(0, 0, 0, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem 1.5rem;
@@ -74,26 +74,26 @@
   text-transform: uppercase;
 }
 
-.suspended-banks__status h3 {
+.withdraw-50__status h3 {
   margin: 0 0 0.8rem;
   font-size: 0.5rem;
   letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.suspended-banks__status div {
+.withdraw-50__status div {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.6rem 0;
 }
 
-.suspended-banks__status p {
+.withdraw-50__status p {
   margin: 0;
   font-size: 0.5rem;
   letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.suspended-banks__status strong {
+.withdraw-50__status strong {
   display: block;
   font-size: 0.9rem;
   font-weight: 500;
@@ -101,7 +101,7 @@
   letter-spacing: 0.05em;
 }
 
-.suspended-banks__story {
+.withdraw-50__story {
   margin: 10vh auto 2.5rem;
   max-width: 640px;
   background: rgba(0, 0, 0, 0.75);
@@ -111,23 +111,23 @@
   line-height: 1.7;
 }
 
-.suspended-banks__story p {
+.withdraw-50__story p {
   margin: 0 0 1.2rem;
   font-size: 1rem;
 }
 
-.suspended-banks__story p:last-child {
+.withdraw-50__story p:last-child {
   margin-bottom: 0;
 }
 
-.suspended-banks__choices {
+.withdraw-50__choices {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-.suspended-banks__choices button {
+.withdraw-50__choices button {
   background: rgba(10, 18, 30, 0.95);
   color: #f4efe6;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -139,12 +139,12 @@
   transition: all 0.2s ease;
 }
 
-.suspended-banks__choices button:hover {
+.withdraw-50__choices button:hover {
   background: rgba(20, 30, 45, 0.95);
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 
-.suspended-banks__choices button:active {
+.withdraw-50__choices button:active {
   transform: translateY(0);
 }
