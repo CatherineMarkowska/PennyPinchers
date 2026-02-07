@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './BankClerkPath.css'
-import SuspendedBank from './SuspendedBank'
+
 
 function BankClerkPath({ onStayCalm }) {
   const [scene, setScene] = useState('intro') // intro | withdraw | stay-line
