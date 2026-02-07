@@ -14,6 +14,7 @@ import WorkNEarnBranch4 from './components/WorkNEarnBranch-4'
 import WorkNEarnBranch5 from './components/WorkNEarnBranch-5'
 import WorkNEarnBranch6 from './components/WorkNEarnBranch-6'
 import hopefulAudio from './components/753968__evanboyerman__hopeful-cinematic-emotional-orchestra-background-music.wav'
+import endSceneAudio from './components/555803__sergequadrado__sunset-loop.wav'
 
 
 
@@ -22,6 +23,7 @@ import hopefulAudio from './components/753968__evanboyerman__hopeful-cinematic-e
 function App() {
   const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | work-earn-0..10 | story
   const bgAudioRef = useRef(null)
+  const endAudioRef = useRef(null)
   const [bgAudioEnabled, setBgAudioEnabled] = useState(false)
   const [audioUnlocked, setAudioUnlocked] = useState(false)
 
@@ -170,6 +172,23 @@ function App() {
     if (!bgAudioEnabled || !audioUnlocked) return
     bgAudioRef.current.play().catch(() => {})
   }, [bgAudioEnabled, audioUnlocked])
+
+  useEffect(() => {
+    if (!endAudioRef.current || !bgAudioRef.current) return
+    if (!audioUnlocked) return
+
+    if (view === 'work-earn-6') {
+      bgAudioRef.current.pause()
+      endAudioRef.current.currentTime = 0
+      endAudioRef.current.play().catch(() => {})
+    } else {
+      endAudioRef.current.pause()
+      endAudioRef.current.currentTime = 0
+      if (bgAudioEnabled) {
+        bgAudioRef.current.play().catch(() => {})
+      }
+    }
+  }, [view, audioUnlocked, bgAudioEnabled])
   
   
   return (
@@ -184,6 +203,7 @@ function App() {
       }}
     >
       <audio ref={bgAudioRef} src={hopefulAudio} preload="auto" loop />
+      <audio ref={endAudioRef} src={endSceneAudio} preload="auto" loop />
       <div className="promo-bar">
         Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate}
       </div>
