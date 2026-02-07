@@ -4,10 +4,12 @@ import Tile from './components/Tile'
 import Era from './components/Era'
 import RoleSelect from './components/RoleSelect'
 
+import BankClerkPath from './components/BankClerkPath'
+
 
 
 function App() {
-  const [view, setView] = useState('home') // home | era | roles | story
+  const [view, setView] = useState('home') // home | era | roles | story | bank-clerk
   const eras = [
     {
       title: 'The Great Depression',
@@ -103,7 +105,19 @@ function App() {
 
       {view === 'era' && <Era onStart={() => setView('roles')} />}
 
-      {view === 'roles' && <RoleSelect onChoose={() => setView('story')} />}
+      {view === 'roles' && (
+        <RoleSelect
+          onChoose={(roleKey) => {
+            if (roleKey === 'bank-clerk') {
+              setView('bank-clerk')
+            } else {
+              setView('story')
+            }
+          }}
+        />
+      )}
+
+      {view === 'bank-clerk' && <BankClerkPath />}
 
       {view === 'story' && <StoryScene onBack={() => setView('roles')} />}
     </div>
