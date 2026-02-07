@@ -4,13 +4,13 @@ import './App.css'
 import Tile from './components/Tile'
 import Era from './components/Era'
 import RoleSelect from './components/RoleSelect'
-
 import BankClerkPath from './components/BankClerkPath'
+import StayCalmWait from './components/StayCalmWait'
 
 
 
 function App() {
-  const [view, setView] = useState('home') // home | now | how | stories | era | roles | story
+  const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | story
   const [ticketEmail, setTicketEmail] = useState('')
   const [ticketPurchased, setTicketPurchased] = useState(false)
   const tileGridRef = useRef(null)
@@ -146,7 +146,7 @@ function App() {
         <div className="logo">
           <img
             className="logo-icon"
-            src="https://www.123rf.com/photo_63402711_film-clap-board-cinema-sign-white-icon-on-red-circle.html"
+            src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000088/63402711-film-clap-board-cinema-sign-white-icon-on-red-circle.jpg"
             alt="Film icon"
           />
           <div>
@@ -361,7 +361,9 @@ function App() {
         />
       )}
 
-      {view === 'bank-clerk' && <BankClerkPath />}
+      {view === 'bank-clerk' && <BankClerkPath onStayCalm={() => setView('stay-calm')} />}
+
+      {view === 'stay-calm' && <StayCalmWait />}
 
       {view === 'story' && <StoryScene onBack={() => setView('roles')} />}
     </div>

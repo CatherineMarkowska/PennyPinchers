@@ -1,0 +1,26 @@
+.stay-calm {
+  min-height: calc(100vh - 70px);
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 6vw;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-align: center;
+}
+
+.stay-calm__text {
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.stay-calm__status {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}

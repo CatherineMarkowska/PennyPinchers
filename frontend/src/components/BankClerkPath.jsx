@@ -1,6 +1,6 @@
 import './BankClerkPath.css'
 
-function BankClerkPath() {
+function BankClerkPath({ onStayCalm }) {
   return (
     <section className="bank-clerk">
       <div className="bank-clerk__top">
@@ -44,7 +44,9 @@ function BankClerkPath() {
 
       <div className="bank-clerk__choices">
         <button type="button">Rush to withdraw savings</button>
-        <button type="button">Stay calm and wait</button>
+        <button type="button" onClick={onStayCalm}>
+          Stay calm and wait
+        </button>
         <button type="button">Call your spouse immediately</button>
       </div>
     </section>
