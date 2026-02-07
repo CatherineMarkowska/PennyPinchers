@@ -166,7 +166,7 @@ function App() {
     return (
     <div className="app">
       <div className="promo-bar">
-        Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate} and score a Roar Pack!
+        Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate}
       </div>
       <header className="site-header">
         <div className="logo">

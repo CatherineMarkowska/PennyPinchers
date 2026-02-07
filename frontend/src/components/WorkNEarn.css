@@ -3,7 +3,7 @@
   background: #000;
   color: #fff;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem 6vw;
   font-family: 'Georgia', 'Times New Roman', serif;
@@ -11,6 +11,7 @@
 }
 
 .work-earn__card {
+  margin-top: 3vh;
   max-width: 760px;
 }
 
