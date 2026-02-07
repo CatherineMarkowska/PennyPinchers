@@ -21,7 +21,7 @@ function App() {
         'Step into the era of breadlines and dust storms as families fight to endure. Follow everyday lives shaped by hardship, resilience, and hope.',
       status: 'start',
       image:
-        'https://unsplash.com/photos/man-in-black-and-red-jacket-holding-brown-wooden-stick-rJ6tenVnp9A',
+        'https://images.unsplash.com/photo-1587553906014-b2b4060dd6f5?q=80&w=980&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'World War II',
@@ -31,7 +31,7 @@ function App() {
         'Move through the global conflict that reshaped nations and generations. Experience the home front, the front lines, and the choices in between.',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/three-monoplanes-squadron-in-world-war-2-oyGmigXV030',
+        'https://images.unsplash.com/photo-1571840933517-88a527cd7008?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'Apollo 11: Moon Landing',
@@ -41,7 +41,7 @@ function App() {
         'Relive the race to the moon and the tension inside Mission Control. Discover the courage and innovation behind one giant leap.',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/buzz-aldrin-on-the-moon-in-front-of-the-us-flag-UeSpvB0Qo88',
+        'https://images.unsplash.com/photo-1614726365930-627c75da663e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'Fall of the Berlin Wall',
@@ -61,7 +61,7 @@ function App() {
         'Enter the tense hours after the reactor failure and the race to contain it. See the human cost and the bravery that followed.',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/yellow-and-black-house-on-brown-grass-field-q-QZw_s97Oc',
+        'https://images.unsplash.com/photo-1590355200067-675cf378fb74?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     {
       title: 'Civil Rights Movement',
@@ -71,7 +71,7 @@ function App() {
         'Walk alongside organizers, students, and leaders in the fight for justice. From sit-ins to marches, courage builds a new future.',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/civil-rights-march-on-washington-dc-WzPxmB_tRlw',
+        'https://images.unsplash.com/photo-1576568699714-a3f4950805d5?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ]
   const nowShowing = eras.filter((era) => era.status === 'start')
@@ -86,7 +86,7 @@ function App() {
         <div className="logo">
           <img
             className="logo-icon"
-            src="https://www.123rf.com/photo_63402711_film-clap-board-cinema-sign-white-icon-on-red-circle.html"
+            src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000088/63402711-film-clap-board-cinema-sign-white-icon-on-red-circle.jpg"
             alt="Film icon"
           />
           <div>
