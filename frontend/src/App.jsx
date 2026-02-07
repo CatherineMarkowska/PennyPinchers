@@ -10,12 +10,14 @@ import StayCalmWait from './components/StayCalmWait'
 
 
 function App() {
-  const [view, setView] = useState('home') // home | era | roles | story | bank-clerk | stay-calm
+  const [view, setView] = useState('home') // home | era | roles | story | bank-clerk
   const eras = [
     {
       title: 'The Great Depression',
       years: '1929–1939',
       rating: 'PG',
+      description:
+        'Step into the era of breadlines and dust storms as families fight to endure. Follow everyday lives shaped by hardship, resilience, and hope.',
       status: 'start',
       image:
         'https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=800&q=80',
@@ -24,6 +26,8 @@ function App() {
       title: 'World War II',
       years: '1939–1945',
       rating: 'R',
+      description:
+        'Move through the global conflict that reshaped nations and generations. Experience the home front, the front lines, and the choices in between.',
       status: 'soon',
       image:
         'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80',
@@ -32,6 +36,8 @@ function App() {
       title: 'Apollo 11: Moon Landing',
       years: '1969',
       rating: 'PG',
+      description:
+        'Relive the race to the moon and the tension inside Mission Control. Discover the courage and innovation behind one giant leap.',
       status: 'soon',
       image:
         'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80',
@@ -40,6 +46,8 @@ function App() {
       title: 'Fall of the Berlin Wall',
       years: '1989',
       rating: 'PG-13',
+      description:
+        'Witness the night a city and a world changed forever. Follow voices from both sides as freedom breaks through concrete.',
       status: 'soon',
       image:
         'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=80',
@@ -48,6 +56,8 @@ function App() {
       title: 'Chernobyl Disaster',
       years: '1986',
       rating: 'R',
+      description:
+        'Enter the tense hours after the reactor failure and the race to contain it. See the human cost and the bravery that followed.',
       status: 'soon',
       image:
         'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80',
@@ -56,6 +66,8 @@ function App() {
       title: 'Civil Rights Movement',
       years: '1954–1968',
       rating: 'PG-13',
+      description:
+        'Walk alongside organizers, students, and leaders in the fight for justice. From sit-ins to marches, courage builds a new future.',
       status: 'soon',
       image:
         'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
@@ -64,6 +76,9 @@ function App() {
 
   return (
     <div className="app">
+      <div className="promo-bar">
+        Get Tickets to see The Great Depression at our Early Access Event on 2/7 and score a Roar Pack!
+      </div>
       <header className="site-header">
         <div className="logo">
           <img
@@ -80,7 +95,9 @@ function App() {
             Home
           </button>
           <a href="#now">Now Showing</a>
-          <a href="#how">How It Works</a>
+          <button className="ghost-btn" type="button" onClick={() => setView('how')}>
+            How It Works
+          </button>
           <a href="#stories">Stories</a>
         </nav>
       </header>
@@ -100,6 +117,76 @@ function App() {
                 onStart={era.status === 'start' ? () => setView('era') : undefined}
               />
             ))}
+          </div>
+        </section>
+      )}
+
+      {view === 'how' && (
+        <section id="how" className="how-it-works">
+          <div className="how-hero">
+            <p className="how-kicker">How It Works</p>
+            <h1>Step into history, one choice at a time</h1>
+            <p className="how-lede">
+              Each story drops you into a pivotal historical era. Your choices shape the
+              story, your relationships, and the outcome.
+            </p>
+            <div className="how-actions">
+              <button className="primary-btn" type="button" onClick={() => setView('era')}>
+                Get Tickets
+              </button>
+              <button className="ghost-btn" type="button" onClick={() => setView('home')}>
+                Back To Home
+              </button>
+            </div>
+          </div>
+
+          <div className="how-grid">
+            <div className="how-card">
+              <h3>Choose a Role</h3>
+              <p>
+                Select a role and starting resources. Each role unlocks different pressures,
+                opportunities, and perspectives.
+              </p>
+            </div>
+            <div className="how-card">
+              <h3>Face Daily Decisions</h3>
+              <p>
+                Work, family, safety, and loyalty collide in every era. Pick your
+                priorities and feel the consequences.
+              </p>
+            </div>
+            <div className="how-card">
+              <h3>Watch The Story Shift</h3>
+              <p>
+                Your choices ripple across the community. The narrative branches into
+                different paths and endings.
+              </p>
+            </div>
+          </div>
+
+          <div className="how-highlight">
+            <div>
+              <h2>Multiple Eras, Multiple Paths</h2>
+              <p>
+                Play through events like the Great Depression, the fall of the Berlin Wall,
+                or the Chernobyl disaster. Each era has its own stakes, dilemmas, and
+                endings.
+              </p>
+            </div>
+            <div className="how-stats">
+              <div>
+                <span>Stories</span>
+                <strong>Multiple Eras</strong>
+              </div>
+              <div>
+                <span>Perspective</span>
+                <strong>Everyday People</strong>
+              </div>
+              <div>
+                <span>Gameplay</span>
+                <strong>Branching Choices</strong>
+              </div>
+            </div>
           </div>
         </section>
       )}
